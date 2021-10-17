@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  root "static_pages#index"
+
+  get "/next_page", to:"static_pages#next_page"
+
+  
 end
